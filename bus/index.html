@@ -40,9 +40,10 @@
 					{{next.lat}}
 					{{next.lng}}
 					{{next.time}}
+				    <a href="geo:{{next.lat}},{{next.lng}}">Click here to open in maps</a>
 			      <!-- {{body}} -->
 			    </div>
-			    <div class="map" id="bus-{{no}}"></div>
+			    	<div class="map" id="bus-{{no}}"></div>
 			  </div>
 	  {{/each}}
 	</script>
