@@ -1,0 +1,163 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E0E0E0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+    height: 3.5rem;
+    position: fixed;
+    background-color: #323232;
+    width: 100%;
+    top: 0;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+    z-index: 999;
+    font-size: 2rem;
+    font-family: 'Vibur', cursive;
+}
+
+.content {
+    padding-top: 5rem;
+    margin: 0 auto;
+    width: 60%;
+    height: 100vh;
+}
+
+.post {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.post:hover {
+    transform: scale(1.1);
+}
+
+.post.typing {
+    transform: scale(1.1);
+}
+
+.textarea {
+    margin: 1rem 1rem 0 1rem;
+    width: 90%;
+    max-width: 90%;
+    height: 7rem;
+    max-height: 7rem;
+    background-color: #fff;
+    font-size: 1.3rem;
+    border: none;
+}
+
+textarea {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome */
+    color: #E0E0E0;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #E0E0E0;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #E0E0E0;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: #E0E0E0;
+    opacity: 1;
+}
+
+.submit-post {
+    position: absolute;
+    width: 4rem;
+    height: 7rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0;
+    background-color: #616161;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.submit-post:before {
+    content: "\f1d9";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    position: absolute;
+    top: 2.5rem;
+    color: #9E9E9E;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+}
+
+.submit-post:hover {
+    background-color: #424242;
+}
+
+.confession-list {
+    padding: 1rem;
+}
+
+.confession:first-child {
+    background-color: #f5f5f5;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.confession:not(:first-child) {
+    background-color: #f5f5f5;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.confession span.comment {
+    position: absolute;
+    font-size: 0.75rem;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    background-color: #E0E0E0;
+    padding: 0 1.5rem 0 0.5rem;
+    border-radius: 1rem;
+    color: #9E9E9E;
+    cursor: pointer;
+}
+
+.confession span.comment:before {
+    content: "\f075";
+    font-family: FontAwesome;
+    color: #BDBDBD;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 7px;
+    top: 2px;
+}
+
+.confession .wrapper {
+    padding: 1rem;
+    word-wrap: break-word;
+    position: relative;
+}

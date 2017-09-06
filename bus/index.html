@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="author" content="" />
+		<meta name="copyright" content="" />
+		<meta name="robots" content="index, follow" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+		<title></title>
+
+		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/style.css" type="text/css"/>
+		<link rel="index" title="" href="" />
+
+		<!--[if lt IE 9 ]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+	</head>
+
+	<body class="" lang="en-US">
+		<div class="content-wrapper">
+			<input type="text" class="bus-id"/>
+			<button class="submit">Submit</button>
+			<div class="result"></div>
+		</div>
+	</body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmkoOITlxwigRiSHhB4ohGC6i3loxMlL4"></script>
+	<script id="bus-template" type="text/x-handlebars-template">
+		{{#each services}}
+			  <div class="bus">
+			    <h1>{{no}}</h1>
+			    <div class="body">
+					{{next.duration_min}}
+					{{next.lat}}
+					{{next.lng}}
+					{{next.time}}
+			      <!-- {{body}} -->
+			    </div>
+			    <div class="map" id="bus-{{no}}"></div>
+			  </div>
+	  {{/each}}
+	</script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/handlebar.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</html>

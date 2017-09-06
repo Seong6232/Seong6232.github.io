@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Confession</title>
+    <meta name="description" content="Confession">
+    <meta name="author" content="Mason Wong">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Vibur" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <meta content='width=device-width, maximum-scale=0.4, user-scalable=0' name='viewport' /> -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="progress-bar">
+        <span class="progress"></span>
+    </div>
+    <div class="header">
+        <span class="logo">Confession</span>
+    </div>
+    <div class="content">
+        <div class="post">
+            <textarea class="textarea" placeholder="Say something today"></textarea>
+            <button class="submit-post">Post</button>
+        </div>
+        <!-- Data content generate from handlebar-->
+        <div class="confession-list">
+            <div class="confession">
+                <div class="wrapper">
+                    <span class="title">#1234 Testing confession</span>
+                    <span class="comment">123</span>
+                </div>
+            </div>
+            <div class="confession">
+                <div class="wrapper">
+                    <span class="title">#1234 Testing confession</span>
+                    <span class="comment">123</span>
+                </div>
+            </div>
+            <div class="confession">
+                <div class="wrapper">
+                    <span class="title">#1234 Testing confession</span>
+                    <span class="comment">123</span>
+                </div>
+            </div>
+            <div class="confession">
+                <div class="wrapper">
+                    <span class="title">#1234 Testing confession</span>
+                    <span class="comment">123</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script id="content-template" type="text/x-handlebars-template"> -->
+<!--   {{#each item}}
+    <div class="items">
+        <div class="img">
+            {{{description}}}
+        </div>
+        <span>{{title}}</span>
+        <a href="{{enclosure._url}}" />
+    </div>
+    {{/each}} -->
+<!-- </script> -->
+<script id="content-template-only-one" type="text/x-handlebars-template">
+    <!--   <div class="items">
+        <div class="img">{{{description}}}</div>
+        <span>{{title}}</span>
+        <a href="{{enclosure._url}}" />
+    </div> -->
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="js/echo.min.js"></script>
+<script type="text/javascript" src="js/xml2json.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyCB503G5sXklA0qf5zV3Cj4CusRttDVCEs",
+    authDomain: "confession-7fdc2.firebaseapp.com",
+    databaseURL: "https://confession-7fdc2.firebaseio.com",
+    projectId: "confession-7fdc2",
+    storageBucket: "confession-7fdc2.appspot.com",
+    messagingSenderId: "525469421287"
+};
+firebase.initializeApp(config);
+</script>
+
+</html>
