@@ -1,6 +1,48 @@
 .content-wrapper{
 	height: 100%;
 	width: 100%;
+	background-color: #3498db;
+}
+
+.submit-input{
+	width: 100%;
+	height: 10rem;
+	position: relative;
+	transition: transform 400ms ease-in-out;
+	transform: translate3d(0,40vh,0) scale(0.9);
+}
+
+.submit-input.focus{
+	transform: translate3d(0,0,0) scale(1);
+}
+
+.submit-input input {
+	outline: none;
+	border: 0;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0.5rem 1.5rem;
+	font-size: 3rem;
+	box-shadow: 0 1rem 3rem rgba(55,55,55,0.2);
+}
+
+.submit-input .submit{
+	position: absolute;
+	height: 10rem;
+	width: 10rem;
+	transform: scale(0.7);
+	border: 0;
+	outline: none;
+	border-radius: 50%;
+	top: 0;
+	right: 0;
+	font-size: 0;
+	background-color: #3498db;
+	/*mask: url(../img/magnifier.svg) 80% 80% no-repeat;	*/
+	background: url(../img/magnifier.svg) no-repeat center;
+	background-size: 80% 80%;
 }
 
 .map {

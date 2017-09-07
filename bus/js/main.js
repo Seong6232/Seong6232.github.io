@@ -3,6 +3,9 @@ $(document).ready(function(){
 	var source   = $("#bus-template").html();
 	var template = Handlebars.compile(source);
 
+
+  bindFocusEvent();
+
 	$(".submit").click(function(){
 
 		var currentBus = $(".bus-id").val();
@@ -21,6 +24,21 @@ $(document).ready(function(){
 
 		})
 	});
+
+  function bindFocusEvent(){
+    $(".bus-id").focus(function(){
+      $(this).parent(".submit-input").addClass("focus");
+    });
+
+    $(".bus-id").blur(function(){
+      $(".submit").click(function(){
+        $(this).parent(".submit-input").addClass("focus");
+      });
+      if($(".result").is(':empty')){
+        $(this).parent(".submit-input").removeClass("focus");
+      }
+    });
+  }
 
 	function showMap(lat,lng, bus){
 		console.log("into");
